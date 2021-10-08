@@ -23,7 +23,7 @@ function score = FRStsFullMap(refName, disName, height, width)
 		frame_score(count, :) = [getSpatialScore(refCur, disCur, spatial_scale), method_2D(ref_diff, dis_diff)];
 		count = count + 1;
 	end
-	score = [score, mean(frame_score(1:count - 1, :), 1);
+	score = [score, mean(frame_score(1:count - 1, :), 1)];
 	frame_score = zeros(height, num_map);
 	count = 1;
 	for index_height = 1:2:height
